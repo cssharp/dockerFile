@@ -19,8 +19,16 @@ php + apache + redis + mysql
 ```
 
 
+其他项目引入
+---------
+```
+git subtree add --prefix=xcd  git@github.com:cssharp/dockerFile.git master --squash
+git subtree pull --prefix=xcd  git@github.com:cssharp/dockerFile.git master --squash
+```
 
-构建docker使用说明
+
+
+jenkins构建docker使用说明
 ---------
 ```
 pwd #查看路径
@@ -40,10 +48,3 @@ sudo docker push registry.cn-hangzhou.aliyuncs.com/domain/php7-swcb
 2. docker build时 "-f" 指定Dockerfile的路径
 3. docker build时 "." 指的是工作目录
 
-
-其他项目引入
----------
-```
-git subtree add --prefix=xcd  git@github.com:cssharp/dockerFile.git master --squash
-git subtree pull --prefix=xcd  git@github.com:cssharp/dockerFile.git master --squash
-```
