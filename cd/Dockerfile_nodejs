@@ -1,0 +1,13 @@
+FROM node:4-onbuild
+MAINTAINER "endou_cai@gmail.com"
+ENV container docker
+
+RUN npm install -g pm2
+
+RUN mkdir -p /home/share/sites/base/logs/logInfo
+RUN mkdir -p /data/www/saas3/logs/logInfo
+RUN mkdir -p /home/smarket3/trialtest/logs/logInfo
+RUN mkdir -p /data/www/uat/logs/logInfo
+RUN mkdir -p /data/www/demo/logs/logInfo
+
+COPY ./ /usr/src/app
